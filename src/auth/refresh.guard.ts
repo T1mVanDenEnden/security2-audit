@@ -11,7 +11,7 @@ export class RefreshAuthGuard implements CanActivate {
     try {
       request.body.token = await this.authService.verifyRefreshToken(request.headers.authorization);
     } catch (err) {
-      return true;
+      return true; // Risk!
     }
 
     return true;
