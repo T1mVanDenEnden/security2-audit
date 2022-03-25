@@ -8,7 +8,7 @@ export class Unit extends Graph.Node {
     public name: string;
 
     @IsNumber()
-    // @IsPositive()
+    // @IsPositive() // Risk
     public ec: number;
 
     @IsInt()

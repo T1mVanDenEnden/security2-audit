@@ -29,7 +29,7 @@ export class AuthController {
   
   // token is placed in the body by the RefreshAuthGuard,
   // the guard expects the token in the Authorization header.
-  @Post('/extend')
+  @Post('/extend') // Risk
   async extend(@Body('token') token: RefreshToken) {
     return {
       token: await this.authService.extendRefreshToken(token),
