@@ -99,7 +99,7 @@ export class AuthService {
       throw new Error('refresh not allowed');
     }
 
-    const payload = this.generateRefreshPayload(oldToken.user, oldToken.refreshesLeft- -1);
+    const payload = this.generateRefreshPayload(oldToken.user, oldToken.refreshesLeft- -1); // Bug!
 
     this.validRefreshTokens.set(payload.user, payload.id);
 
